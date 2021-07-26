@@ -9,3 +9,12 @@ server_scripts {
 client_scripts {
 	'Client/Main.lua',
 }
+
+shared_scripts {
+	'@es_extended/imports.lua',
+	'@es_extended/locale.lua',
+}
+
+dependencies {
+	'es_extended'
+}
