@@ -85,11 +85,5 @@ RegisterNetEvent("Clothes:Client:Load", function()
 end)
 
 RegisterCommand("resetskin", function()
-    ESX.TriggerServerCallback("Skin:Server:GetPlayerSkin", function(appearance, jobSkin) 
-        if appearance == nil then
-            Citizen.Wait(200)
-        else
-            exports['fivem-appearance']:setPlayerAppearance(appearance)
-        end
-    end)
+    TriggerEvent("Clothes:Client:Load")
 end)
